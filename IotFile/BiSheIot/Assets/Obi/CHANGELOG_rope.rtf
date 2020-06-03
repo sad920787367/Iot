@@ -1,0 +1,148 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21540\viewh10060\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \expnd0\expndtw0\kerning0
+# Change Log\
+All notable changes to \'93Obi - Advanced ropes for Unity\'94 will be documented in this file.\
+\
+## [3.2]\
+### Added\
+- Support for CapsuleCollider2D.\
+\
+### Changed\
+- Rope is still rendered (though not simulated) when the ObiRope component is disabled.\
+- Colliders/rigidbodies are no longer copied over to the C++ library each frame. Instead, only colliders that have their transform or any collision-related property altered are copied to the solver. This greatly improves performance when many colliders are present, and greatly reduces memory allocation and GC activity.\
+- AllocateParticles() and FreeParticles() have been merged with AddActor() and RemoveActor() respectively. A new per-particle array \'93particleToActor\'94 makes it faster and easier to know which actor a particle belongs to.\
+\
+### Removed\
+- ObiCollisionGroup has disappeared. It is no longer necessary to manually add colliders to a group, instead each ObiSolver automatically picks up all ObiColliders in a given layer.\
+- MeshColliders are now always treated as two-sided thin concave meshes. Solid and one-sided modes have disappeared.\
+\
+### Fixed\
+- Android issue that prevented some devices from finding the Oni library.\
+- Removed redundant menu items.\
+\
+## [3.1.1]\
+### Added\
+- New \'93Line\'94 rendering mode for ropes. This will render the rope as a camera-oriented quad strip, similar to what Unity\'92s LineRenderer does. This is useful for lightweight rendering and 2D games.\
+- Particle renderer is now much faster and also allocates less memory.\
+- New \'93hierarchical\'94 method to generate tether constraints: this method generates more constraints than the traditional \'93anchor to fixed\'94 approach, but works in the general case even if there are no fixed particles.\
+\
+### Changed\
+- Installation is no longer required. Obi now works right out of the box, so the installation window has been removed, and the \'93Editor default resources\'94 and \'93Gizmos\'94 folders removed.\
+\
+## [3.1]\
+### Added\
+- You can now choose where should the solver be updated: FixedUpdate, AfterFixedUpdate, or LateUpdate.\
+- Rope rendering now supports variable thickness, based on particle radii. Enabled by default, disable \'93thickness from particles\'94 to get uniform thickness regardless of particle radii variations.\
+- Edit-time preview of \'93smoothness\'94 rope parameter.\
+- Utility method to calculate actual rope length.\
+- Support for triggers. A trigger collider will generate contact constraints, but won\'b4t enforce them.\
+- Contact structs returned by the OnCollision event now include the contact tangent and bitangent vectors.\
+- Added per-particle layer properties, for finer collision control.\
+\
+### Changed\
+- Faster and more accurate rigidbody impulse application, which results in better collision resolution.\
+- Greatly improved pin constraint stability for large mass ratios.\
+- ObiColliderGroup\'92s Colliders and Colliders2D properties are now plain arrays: \'93colliders\'94 and \'93colliders2D\'94.\
+- Memory allocation for rope mesh generation has been reduced by 90%.\
+- ObiParticleRenderer memory allocation has been greatly reduced, and its performance improved.\
+- Pin constraints are now always drawn in particle edit mode, not only when the particles are selected.\
+\
+### Fixed\
+- Got rid of warnings related to obsolete platform enums in sample scripts.\
+- Potential bug in GCHandle deallocation affecting upcoming Unity versions (thanks to the guys at Unity for pointing me at this)\
+- Tearable pin constraints now work correctly.\
+\
+## [3.0.1]\
+### Added\
+- Support for iOS simulator.\
+- Faster collision contact generation.\
+\
+### Fixed\
+- Crash in Crane scene due to a bug in pin constraints.\
+\
+## [3.0]\
+\
+#IMPORTANT: You\'92ll need to re-generate all your ropes as internal data layout of previous versions is not compatible with this update.\
+### Added \
+- Welcome window with automatic installer.\
+- Upgraded constraint projection to XPBD (extended position-based dynamics). This decouples stiffness and damping from the amount of iterations, resulting in more realistic simulation.\
+- Solver constraint enforcement order can now be changed. This allows to change the relative importance of constraints.\
+- The solver now uses a task-based threading system which allows to exploit parallelism between multiple solvers.\
+- Custom multithreading profiler, that allows to fine-tune performance.\
+- Optional local-space simulation, for better numerical accuracy in large-scale worlds and greater control.\
+- ObiStitcher component allows to stitch together separate ropes.\
+- Added pencil paint mode to particle editor.\
+- Automatic self-collisions disabling for particles that intersect in rest pose. This allows to set larger particle radii \
+  to ensure better self-collisions, without worrying about constraint fighting.\
+- Breakable pin constraints.\
+- Ropes are now tearable, and custom prefabs can be instantiated at both sides of the tear.\
+- Rope length can be changed at runtime, using the ObiRopeCursor component.\
+- Procedural curve geometry smoothing.\
+\
+### Changed\
+- Actor particle limit is no longer 16384 but 65536, matching Unity\'92s own vertex limit.\
+- Particle editor paint brush falloff has ben changed from linear to gaussian.\
+- Distance constraints\'92 compression stiffness has been replaced by a slack percentage.\
+- Performance improvement in mesh colliders and edge colliders.\
+\
+### Fixed\
+- Bug in collision detection against terrains.\
+- Crash in 32-bit windows systems due to memory misalignment.\
+- Bug that caused slow convergence and excessive jittering for particle-particle sequential contact resolution.\
+- Bug in hierarchical grid update that caused a crash in some cases when a hash key collision happened.\
+- Bug in continuous collision detection that caused particles to be pushed to the other side of very thin objects.\
+- Bug in ray/bounding box intersection test caused by non-IEEE754 compliant SSE division by zero.\
+- Bug that caused ObiParticleRenderer to ignore camera culling mask, and render in all cameras.\
+- Bug that caused a crash under certain conditions in 32 bit systems.\
+- Bug that caused particle property value field to reset to the value of the last particle when painting.\
+- Fixed collision stabilization bug that caused particles to sink slightly when over a dynamic rigidbody.\
+\
+## [1.2]\
+\
+### Added\
+- Android support.\
+- Upgraded constraint projection to XPBD (extended position-based dynamics). This decouples stiffness and damping from the amount of iterations.\
+- Solver constraint enforcement order can now be changed. This allows to change the relative importance of constraints.\
+- Welcome window with automatic installer.\
+- Resolution-preserving method to change rope length dynamically.\
+- Added pencil paint mode to particle editor.\
+- Optional local-space simulation, for better numerical accuracy in large-scale worlds and greater control.\
+- Custom multithreading profiler, that allows to fine-tune performance.\
+- Better particle visualization in editor.\
+- Breakable pin constraints.\
+\
+### Changed\
+- Actor particle limit is no longer 16384 but 65536, matching Unity\'92s own vertex limit.\
+- Particle editor paint brush falloff has ben changed from linear to gaussian.\
+- Distance constraints\'92 compression stiffness has been replaced by a slack percentage.\
+\
+### Fixed\
+- Bug that caused an index out of bounds exception when initializing rope with zero resolution.\
+- Bug that caused an error message regarding MeshFilter destruction when entering play mode with a rope selected in the hierarchy.\
+- Bug that prevented the particle editor window from appearing on retina displays.\
+- 1-frame delay between particle and rigid body physics, which affected pin and collision constraints.\
+\
+## [1.1]\
+\
+### Added\
+- MeshColliders are now fully supported.\
+- Support for 2D physics, Box2D, Circle2D and Edge2D colliders.\
+- Chain rendering.\
+- Sleep threshold that keeps particles fixed in place when their kinetic energy is low.\
+- Chain constraints, that allow for 100% inextensible ropes.\
+- Rope thickness, twist, cap sections and section shape can now be changed without the need to re-initialize the rope.\
+- Required constraint components are automatically removed from the object when removing the rope component in editor.\
+\
+### Fixed\
+- Issue with box colliders, that caused incorrect contact generation in corners when using contactOffset.\
+\
+## [1.0.0] - 2015-07-16\
+- Initial release.\
+}

@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: e118d770e9a71344d8677cc926c71b5b
+timeCreated: 1584586075
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Area
+    100002: Area.001
+    100004: Area.002
+    100006: Area.003
+    100008: Camera
+    100010: Cube
+    100012: //RootNode
+    100014: Plane
+    100016: Plane.001
+    100018: Plane.002
+    100020: Plane.003
+    100022: Plane.004
+    100024: Plane.005
+    100026: Plane.006
+    100028: Plane.007
+    100030: Plane.008
+    100032: Plane.009
+    100034: Plane.010
+    100036: Plane.011
+    100038: Plane.012
+    100040: Plane.013
+    400000: Area
+    400002: Area.001
+    400004: Area.002
+    400006: Area.003
+    400008: Camera
+    400010: Cube
+    400012: //RootNode
+    400014: Plane
+    400016: Plane.001
+    400018: Plane.002
+    400020: Plane.003
+    400022: Plane.004
+    400024: Plane.005
+    400026: Plane.006
+    400028: Plane.007
+    400030: Plane.008
+    400032: Plane.009
+    400034: Plane.010
+    400036: Plane.011
+    400038: Plane.012
+    400040: Plane.013
+    2000000: Camera
+    2300000: Cube
+    2300002: Plane
+    2300004: Plane.001
+    2300006: Plane.002
+    2300008: Plane.003
+    2300010: Plane.004
+    2300012: Plane.005
+    2300014: Plane.006
+    2300016: Plane.007
+    2300018: Plane.008
+    2300020: Plane.009
+    2300022: Plane.010
+    2300024: Plane.011
+    2300026: Plane.012
+    2300028: Plane.013
+    3300000: Cube
+    3300002: Plane
+    3300004: Plane.001
+    3300006: Plane.002
+    3300008: Plane.003
+    3300010: Plane.004
+    3300012: Plane.005
+    3300014: Plane.006
+    3300016: Plane.007
+    3300018: Plane.008
+    3300020: Plane.009
+    3300022: Plane.010
+    3300024: Plane.011
+    3300026: Plane.012
+    3300028: Plane.013
+    4300000: Plane
+    4300002: Plane.001
+    4300004: Plane.002
+    4300006: Plane.003
+    4300008: Plane.004
+    4300010: Plane.005
+    4300012: Plane.006
+    4300014: Plane.007
+    4300016: Plane.008
+    4300018: Plane.009
+    4300020: Plane.010
+    4300022: Plane.011
+    4300024: Plane.012
+    4300026: Plane.013
+    4300028: Cube
+    10800000: Area
+    10800002: Area.001
+    10800004: Area.002
+    10800006: Area.003
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Basic
+    second: {fileID: 2100000, guid: c1a34b7b799f2e540ba8443a89786b87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: f6ae0c2ad81748d4aab3c5297dc3f416, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: dae85255375748f489bdfa70a24aa75f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: 446d59cd2977f854c93b3a62a0338c9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold
+    second: {fileID: 2100000, guid: f6275f63871020844b84cfd8fc0335c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MBlack
+    second: {fileID: 2100000, guid: cf23594841feab54bb045b31c1154850, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: d34caf840ff507947a0d88f2fc78e428, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Silver
+    second: {fileID: 2100000, guid: 53283cb7a515d834c9440b35c4fe3472, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SimpleWhite
+    second: {fileID: 2100000, guid: 2809ccac9bb6b1b4a841cac000cb2572, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 4e94ff4757e990b4394713faa1ce53ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yellow
+    second: {fileID: 2100000, guid: 24d731b0310e0c5479eaa8eb0479ff94, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
